@@ -1,0 +1,128 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  min-height: 30vw;
+  display: flex;
+  flex-direction: column;
+  cursor: grab;
+  transition: all 0.4s ease-out;
+}
+
+@media screen and (max-width: 1400px) {
+  .carousel-container {
+    min-height: 40vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel-container {
+    min-height: 50vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-container {
+    min-height: 70vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    min-height: 70vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-container {
+    min-height: 160vw;
+  }
+}
+
+.carousel-container.cropped {
+  margin: 0 -15%;
+  width: 130%;
+}
+
+.carousel-content {
+  /* margin: 0 -8px; */
+  display: flex;
+  transition: all 0.4s ease-out;
+}
+
+.carousel-content::-webkit-scrollbar,
+.carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-content > * {
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.carousel-content.show-2 > * {
+  width: 50%;
+}
+
+.carousel-content.show-3 > * {
+  width: 33.333333333333333%;
+}
+
+.carousel-content.show-4 > * {
+  width: 25%;
+}
+
+.carousel-content.show-5 > * {
+  width: 20%;
+}
+
+.carousel-content.show-6 > * {
+  width: 16.6666666666666666%;
+}
+
+.carousel-button {
+  position: absolute;
+  display: none;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: #0003;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center center;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.carousel-container:hover .carousel-button {
+  display: flex;
+}
+
+.carousel-button:hover {
+  background-color: #0001;
+}
+
+.carousel-container .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-container .indicator {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.6s ease-out;
+}
+
+.carousel-container .indicator.bg-white {
+  width: 32px;
+  height: 14px;
+}

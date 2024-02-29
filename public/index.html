@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/icon-light.svg" id="light-icon" />
+    <link rel="icon" href="%PUBLIC_URL%/icon-dark.svg" id="dark-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#f0f0f2"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#141417"
+    />
+    <meta
+      name="description"
+      content="Bitsliced is the creator of the based on blockchain technology with a one of a kind ecosystem that makes minting, collecting and trading physical items in the digital world simplified and fun."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-light.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sliced app</title>
+    <script>
+      // lightSchemeIcon = document.querySelector('link#light-icon');
+      // darkSchemeIcon = document.querySelector('link#dark-icon');
+
+      // matcher = window.matchMedia('(prefers-color-scheme: dark)');
+      // matcher.addListener(onUpdate);
+      // function onUpdate() {
+      //   if (matcher.matches) {
+      //     lightSchemeIcon.remove();
+      //     document.head.append(darkSchemeIcon);
+      //   } else {
+      //     document.head.append(lightSchemeIcon);
+      //     darkSchemeIcon.remove();
+      //   }
+      // }
+
+      // onUpdate();
+
+      console.log(window.innerWidth);
+      function updateWidth() {
+        viewport = document.querySelector('meta[name=viewport]');
+        if (window.innerWidth >= 768) {
+          viewport.setAttribute(
+            'content',
+            'width=device-width, initial-scale=0.9'
+          );
+        } else {
+          viewport.setAttribute(
+            'content',
+            'width=device-width, initial-scale=1.0'
+          );
+        }
+      }
+      updateWidth();
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

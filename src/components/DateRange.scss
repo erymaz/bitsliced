@@ -1,0 +1,41 @@
+.rdrDefinedRangesWrapper {
+  width: 200px;
+}
+.rdrMonth {
+  width: 22em;
+}
+.rdrStaticRangeLabel {
+  font-size: 14px;
+  color: #000;
+}
+.rdrInputRange {
+  padding: 5px 10px 5px 20px;
+  input {
+    color: #000;
+  }
+  span {
+    font-size: 14px;
+    color: #000;
+  }
+}
+.rdrDay {
+  line-height: 2.4em;
+  height: 2.4em;
+}
+.rdrStartEdge,
+.rdrDayStartOfWeek .rdrInRange {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.rdrEndEdge,
+.rdrDayEndOfWeek .rdrInRange {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.rdrWeekDay,
+.rdrDayNumber span {
+  font-size: 14px;
+}
+.rdrMonthAndYearPickers select option {
+  color: #000;
+}
